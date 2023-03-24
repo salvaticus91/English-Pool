@@ -1,0 +1,32 @@
+
+    
+    
+    
+           
+           
+           
+           
+
+
+
+
+class pocket:
+    def pockets(self):
+        for i in ['left','right']:
+            for j in ['top','middle','bottom']:
+                if i == 0:
+                    pocket(i,j)
+    def update_pockets(self):
+        pygame.draw.circle(gameDisplay,black,(self.rail_size,self.rail_size),self.corner_pocket_size)
+        pygame.draw.circle(gameDisplay,black,(self.table_size[0]/2,self.rail_size-self.cushion_size),self.corner_pocket_size)
+        pygame.draw.circle(gameDisplay,black,(self.table_size[0]-(self.rail_size-self.cushion_size),self.rail_size-self.cushion_size),self.corner_pocket_size)
+        pygame.draw.circle(gameDisplay,black,(50,self.table_size[1]-(self.rail_size-self.cushion_size)),self.corner_pocket_size)
+        pygame.draw.circle(gameDisplay,black,(self.table_size[0]/2,self.table_size[1]-(self.rail_size-self.cushion_size)),self.corner_pocket_size)
+        pygame.draw.circle(gameDisplay,black,(self.table_size[0]-(self.rail_size-self.cushion_size),self.table_size[1]-(self.rail_size-self.cushion_size)),self.corner_pocket_size)
+    def __init__(self,radius = 5):
+        self.radius = radius
+        self.corner_pocket_size = 16
+        self.middle_pocket_size = 2.5
+        pass
+
+
